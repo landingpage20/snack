@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Demo - Ricerca</title>
+    <title>Snack products - Ricerca</title>
     <style>
         * {
             margin: 0;
@@ -260,15 +260,15 @@
 <body>
     <div class="container">
         <h1>🛍️ Shop Demo</h1>
-        <p class="subtitle">Esplora i nostri prodotti e simula un acquisto</p>
+        <p class="subtitle"> Explore our catalog and simulate your purchase </p>
         
         <div class="user-id-display" id="userIdDisplay">
             Caricamento ID utente...
         </div>
 
         <div class="cart-summary">
-            <h2>🛒 Carrello</h2>
-            <div id="cartItems" class="empty-cart">Il carrello è vuoto</div>
+            <h2>🛒 Cart</h2>
+            <div id="cartItems" class="empty-cart">Your cart is empty</div>
             <div class="cart-total" id="cartTotal"></div>
         </div>
 
@@ -306,52 +306,36 @@
         const products = [
             { 
                 id: 1, 
-                name: 'Laptop Pro', 
-                price: 1299, 
-                emoji: '💻', 
-                description: 'Potente laptop per professionisti',
-                image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop'
+                name: 'Snack 1', 
+                price: 1,5, 
+                emoji: '', 
+                description: 'Description of snack 1',
+                image: 'https://static.galbusera.it/media/0003726_galbusera-zalet-biscotto-con-malto-e-miele-510g_550.jpeg'
             },
             { 
                 id: 2, 
-                name: 'Smartphone X', 
-                price: 899, 
-                emoji: '📱', 
-                description: 'Ultimo modello con fotocamera avanzata',
-                image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop'
+                name: 'Product 2, 
+                price: 2,00, 
+                emoji: '', 
+                description: 'Description of snack 2',
+                image: 'https://static.galbusera.it/media/0003802_galbusera-ottocento-biscotto-di-pastafrolla-con-burro-250g_550.jpeg'
             },
             { 
                 id: 3, 
-                name: 'Cuffie Wireless', 
-                price: 199, 
-                emoji: '🎧', 
-                description: 'Audio premium con cancellazione rumore',
-                image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop'
+                name: 'Product 3, 
+                price: 1,75, 
+                emoji: '', 
+                description: 'Description of snack 3',
+                image: 'https://static.galbusera.it/media/0003717_galbusera-thefroll-biscotto-con-zucchero-di-canna-e-miele-400g_550.jpeg'
             },
             { 
                 id: 4, 
-                name: 'Smartwatch', 
-                price: 349, 
-                emoji: '⌚', 
-                description: 'Monitora la tua salute 24/7',
-                image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop'
-            },
-            { 
-                id: 5, 
-                name: 'Tablet Ultra', 
-                price: 699, 
-                emoji: '📱', 
-                description: 'Perfetto per creativi e studenti',
-                image: 'https://images.unsplash.com/photo-1561154464-82e9adf32764?w=400&h=300&fit=crop'
-            },
-            { 
-                id: 6, 
-                name: 'Fotocamera Digitale', 
-                price: 1499, 
-                emoji: '📷', 
-                description: 'Qualità professionale, facile da usare',
-                image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&h=300&fit=crop'
-            }
+                name: 'Product 4', 
+                price: 2,20, 
+                emoji: '', 
+                description: 'Description of product 4,
+                image: 'https://static.galbusera.it/media/0003832_galbusera-valtellina-biscotto-con-latte-intero-fresco-pastorizzato-500g_550.jpeg'
+            } 
         ];
 
         // Stato dell'applicazione
@@ -372,7 +356,7 @@
         // Inizializza
         function init() {
             userId = getUserIdFromURL();
-            document.getElementById('userIdDisplay').textContent = `ID Partecipante: ${userId}`;
+            document.getElementById('userIdDisplay').textContent = `user ID : ${userId}`;
             
             trackEvent('session_start', null, null);
             renderProducts();
@@ -436,7 +420,7 @@
                         <div class="product-description">${product.description}</div>
                         <div class="product-price">€${product.price}</div>
                         <button class="btn-add-cart" onclick="addToCart(event, ${product.id})" id="btn-${product.id}">
-                            Aggiungi al carrello
+                            ADD TO CART
                         </button>
                     </div>
                 `;
@@ -449,7 +433,7 @@
             trackEvent('product_view', productId, product.price);
         }
 
-        // Aggiungi al carrello
+        // ADD TO CART
         function addToCart(event, productId) {
             event.stopPropagation();
             
@@ -472,17 +456,17 @@
             
             setTimeout(() => {
                 btn.classList.remove('added');
-                btn.textContent = 'Aggiungi al carrello';
+                btn.textContent = 'ADD TO CART';
             }, 1500);
         }
 
-        // Aggiorna carrello
+        // Update cart
         function updateCart() {
             const cartItemsDiv = document.getElementById('cartItems');
             const cartTotalDiv = document.getElementById('cartTotal');
             
             if (cart.length === 0) {
-                cartItemsDiv.innerHTML = '<div class="empty-cart">Il carrello è vuoto</div>';
+                cartItemsDiv.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
                 cartTotalDiv.textContent = '';
                 return;
             }
