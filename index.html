@@ -261,7 +261,7 @@
 <body>
   <div class="container">
     <h1>The Aurum Store</h1>
-    <p class="subtitle">All our products are Free From Artificial Ingredients</p>
+    <p class="subtitle">All our products are Free From Chemical Additives</p>
 
     <div class="user-id-display" id="userIdDisplay">Caricamento ID utente...</div>
 
@@ -274,37 +274,14 @@
     <div class="products-grid" id="productsGrid"></div>
   </div>
 
-  <button class="admin-toggle" onclick="toggleAdmin()">📊 Dati Tracking</button>
-  <div class="overlay" id="overlay" onclick="toggleAdmin()"></div>
-
-  <div class="admin-panel" id="adminPanel">
-    <h2>📊 Dashboard Tracking</h2>
-    <p>Eventi registrati: <strong id="eventCount">0</strong></p>
-    <button class="btn-export" onclick="exportCSV()">📥 Esporta CSV</button>
-    <div style="overflow-x: auto;">
-      <table class="tracking-table" id="trackingTable">
-        <thead>
-          <tr>
-            <th>Timestamp</th>
-            <th>User ID</th>
-            <th>Evento</th>
-            <th>Prodotto</th>
-            <th>Prezzo</th>
-          </tr>
-        </thead>
-        <tbody id="trackingBody"></tbody>
-      </table>
-    </div>
-  </div>
-
   <script>
     const products = [
       {
         id: 1,
         name: 'Galbusera Zalet Biscuits',
-        price: 2.50, // ✅ corretto
+        price: 2.50,
         emoji: '🍪',
-        description: 'No artificial ingredients',
+        description: 'No chemical additives',
         image: 'https://static.galbusera.it/media/0003726_galbusera-zalet-biscotto-con-malto-e-miele-510g_550.jpeg'
       },
       {
@@ -312,7 +289,7 @@
         name: 'Galbusera TheFroll Biscuits',
         price: 2.50,
         emoji: '🍪',
-        description: 'No artificial ingredients',
+        description: 'No chemical additives',
         image: 'https://static.galbusera.it/media/0003717_galbusera-thefroll-biscotto-con-zucchero-di-canna-e-miele-400g_550.jpeg'
       },
       {
@@ -320,7 +297,7 @@
         name: 'Galbusera Valtellina Biscuits',
         price: 2.50,
         emoji: '🍪',
-        description: 'No artificial ingredients',
+        description: 'No chemical additives',
         image: 'https://static.galbusera.it/media/0003832_galbusera-valtellina-biscotto-con-latte-intero-fresco-pastorizzato-500g_550.jpeg'
       },
       {
@@ -328,7 +305,7 @@
         name: 'Tre Marie Nougal',
         price: 1.50,
         emoji: '🍪',
-        description: 'No artificial ingredients',
+        description: 'No chemical additives',
         image: 'https://static.galbusera.it/media/0003537_wafer-stracciatella-ancora-uno-tre-marie-140g_550.png'
       },
       {
@@ -336,7 +313,7 @@
         name: 'Tre Marie Avel',
         price: 1.50,
         emoji: '🍪',
-        description: 'No artificial ingredients',
+        description: 'No chemical additives',
         image: 'https://static.galbusera.it/media/0003542_wafer-nocciolato-ancora-uno-tre-marie-140g_550.png'
       },
       {
@@ -344,7 +321,7 @@
         name: 'Tre Marie Migdal',
         price: 1.50,
         emoji: '🍪',
-        description: 'No artificial ingredients',
+        description: 'No chemical additives',
         image: 'https://static.galbusera.it/media/0003539_wafer-mandorlato-ancora-uno-tre-marie-140g_550.png'
       }
     ];
@@ -515,3 +492,4 @@
   </script>
 </body>
 </html>
+
