@@ -49,19 +49,19 @@
 
   <script>
     const products = [
-      { id:1, name:'Zuegg Blueberry Juice', price:1.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://www.zuegg.it/wp-content/uploads/2023/11/6x125ml-Mirtillo.webp'},
-      { id:2, name:'Zuegg Pear Juice', price:1.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://www.zuegg.it/wp-content/uploads/2023/11/bar-pera-1.webp' },
-      { id:3, name:'Zuegg Peach Jam', price:2.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://www.zuegg.it/wp-content/uploads/2023/11/320g-pesche.webp' },
-      { id:4, name:'Zuegg Strawberry Jam', price:2.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://www.zuegg.it/wp-content/uploads/2023/11/320g-fragole.webp' },
-      { id:5, name:'Zuegg Apricot Preserves', price:3.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://www.zuegg.it/wp-content/uploads/2023/11/pasticcera-albicocca-1.webp' },
-      { id:6, name:'Zuegg Cherry Preserves', price:3.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://www.zuegg.it/wp-content/uploads/2023/11/pasticcera-ciliegie-1.webp' }
+      { id:1, name:'Galbusera Zalet Biscuits', price:2.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://static.galbusera.it/media/0003726_galbusera-zalet-biscotto-con-malto-e-miele-510g_550.jpeg' },
+      { id:2, name:'Galbusera TheFroll Biscuits', price:2.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://static.galbusera.it/media/0003717_galbusera-thefroll-biscotto-con-zucchero-di-canna-e-miele-400g_550.jpeg' },
+      { id:3, name:'Galbusera Valtellina Biscuits', price:2.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://static.galbusera.it/media/0003832_galbusera-valtellina-biscotto-con-latte-intero-fresco-pastorizzato-500g_550.jpeg' },
+      { id:4, name:'Tre Marie Nougal', price:1.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://static.galbusera.it/media/0003537_wafer-stracciatella-ancora-uno-tre-marie-140g_550.png' },
+      { id:5, name:'Tre Marie Avel', price:1.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://static.galbusera.it/media/0003542_wafer-nocciolato-ancora-uno-tre-marie-140g_550.png' },
+      { id:6, name:'Tre Marie Migdal', price:1.5, emoji:'🍪', description:'Made with 100% Natural Ingredients', image:'https://static.galbusera.it/media/0003539_wafer-mandorlato-ancora-uno-tre-marie-140g_550.png' }
     ];
 
     let userId = null;
     let cart = [];
     let sessionStart = Date.now();
     const trackingData = [];
-    const GOOGLE_SHEETS_URL = 'https://docs.google.com/spreadsheets/d/1vFkNOAm1a9P6bviNyKtMK0vZac3PWIKwCenccEgEh98/edit?gid=0#gid=0';
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxBrY5SfRI3r7MY9tRGTn6-eQFHh9uYQkpWQ8jdLmOZ4ltrPN6y_2L3M82gFijAAEhEnQ/exec';
 
     function getUserIdFromURL() {
       const params = new URLSearchParams(window.location.search);
